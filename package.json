@@ -1,0 +1,33 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This portfolio is built with a responsive design, using React, SASS and Next JS to provide a modern feel with a generous sprinkle of my own personality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yluo12/Portfolio.git"
+  },
+  "keywords": [
+    "personal",
+    "website",
+    "react",
+    "nextJS"
+  ],
+  "author": "Elena Luo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yluo12/Portfolio/issues"
+  },
+  "homepage": "https://github.com/yluo12/Portfolio#readme",
+  "dependencies": {
+    "next": "^14.0.3",
+    "react": "^18.2.0"
+  }
+}
