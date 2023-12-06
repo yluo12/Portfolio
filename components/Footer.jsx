@@ -1,5 +1,7 @@
-import linkedinImg from '../public/images/img-linkedin.png';
-import githubImg from '../public/images/img-github.png';
+import Image from 'next/image';
+
+import linkedinImg from '/public/images/img-linkedin.png';
+import githubImg from '/public/images/img-github.png';
 
 
 const Footer = () => {
@@ -10,8 +12,8 @@ const Footer = () => {
         <div><span className="material-symbols-outlined">location_on</span>San Francisco Bay Area</div>
       </div>
       <div>
-        <a href="https://www.linkedin.com/in/yantingluo/"><img src={linkedinImg} alt="Linkedin logo image"/></a>
-        <a href="https://github.com/yluo12"><img src={githubImg} alt="Github logo image"/></a>
+        <a href="https://www.linkedin.com/in/yantingluo/"><Image src={linkedinImg} alt="Linkedin logo image"/></a>
+        <a href="https://github.com/yluo12"><Image src={githubImg} alt="Github logo image"/></a>
       </div>
     </section>
   )
