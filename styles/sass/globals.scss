@@ -1,9 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:wght@400;500;700&display=swap');
 
+// variables
+$font-homePage: 'Pacifico', cursive;
+$font-body: 'Rubik', sans-serif;
+
+$color-background: #ebe5d9; // #f5f1e3
+$color-green: #c2eaba;
+$color-pink: #FFD8E1;
+$color-yellow: #F5E2A4;
+$color-blue: #A8C5EC;
+$color-purple: #B5B2E1;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
-  font-family: 'Rubik';
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-body;
 }
 
 h1 {
-  font-family: 'Pacifico', cursive;
+  font-family: $font-homePage;
+}
+
+.hero {
+  background: linear-gradient(45deg, $color-green, $color-yellow, $color-pink, $color-blue, $color-purple);
+  background-size: 400%;
+  height: 100vh;
+  @include flex-center;
+  animation: bgAnimation 15s linear infinite;
+}
+
+@keyframes bgAnimation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
 }
