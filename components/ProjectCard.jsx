@@ -1,21 +1,35 @@
 import Image from 'next/image';
 
 import fecImg from '/public/images/img-fec.png';
+import mvpImg from '/public/images/img-mvp.png';
+// import nativImg from '/public/images/img-nativ.png';
 
-const ProjectCard = ({projectData}) => {
-  // const url = projectData[0].url;
-  // console.log(url)
+const ProjectCard = ({project}) => {
+  let img;
+  if (project.project === 'An E-commerce Webpage and API services') {
+    img = fecImg;
+  } else if (project.project === 'School MarketPlace') {
+    img = mvpImg;
+  } else if (project.project === 'NativEats') {
+    img = mvpImg;
+  }
   return (
     <div>
       <div>
-        <Image src={fecImg} alt="NativEats project screenshot" width="450" height="450"/>
+        <Image src={img} alt={project.project + " screenshot"} />
       </div>
       <div>
-        <span>{projectData[0].project}</span>
-        <p>{projectData[0].description}</p>
+        <span>{project.project}</span>
+        <ul>
+          {project.tech.map((t) => {
+            return <li key={t}>{t}</li>
+          })}
+        </ul>
+        <p>{project.description}</p>
       </div>
     </div>
   )
 };
 
 export default ProjectCard;
+// width="450" height="450"

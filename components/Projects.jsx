@@ -23,7 +23,9 @@ const Projects = () => {
   return (
     <section>
       <h2>PROJECTS</h2>
-      <ProjectCard projectData={projectData} />
+      {projectData.map((project) => {
+        return <ProjectCard project={project} key={project.project} />
+      })}
     </section>
   )
 };
