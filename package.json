@@ -29,5 +29,8 @@
   "dependencies": {
     "next": "^14.0.3",
     "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
   }
 }
