@@ -1,8 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:wght@400;500;700&display=swap");
-body {
+/*- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
   font-family: "Rubik", sans-serif;
+  background-color: #f8f5ef;
+  color: #07515F;
+  position: relative;
 }
 
 h1 {
@@ -10,13 +27,15 @@ h1 {
 }
 
 .hero {
-  background: linear-gradient(45deg, #c2eaba, #F5E2A4, #FFD8E1, #A8C5EC, #B5B2E1);
-  background-size: 400%;
   height: 100vh;
+  box-shadow: 0px 50px 50px #f8f5ef;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: bgAnimation 15s linear infinite;
+  background: linear-gradient(45deg, #D7F5D1, #F5E2A4, #f7d5bf, #FFD8E1, #BCD8FC, #c2c0ec);
+  background-size: 400%;
+  animation: bgAnimation 20s linear infinite;
 }
 
 @keyframes bgAnimation {
@@ -29,6 +48,37 @@ h1 {
   100% {
     background-position: 0% 50%;
   }
+}
+.navigation {
+  width: 100vw;
+  position: absolute;
+  top: 3.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigation ul {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.navigation ul li {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.navigation a {
+  text-decoration: none;
+  color: #3c8e9d;
+  padding: 0.5rem 1rem;
+}
+.navigation a:hover, .navigation a:active {
+  color: #6daab6;
+  background-color: #f8f5ef;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 20px #f8f5ef;
 }
 
 /*# sourceMappingURL=globals.css.map */

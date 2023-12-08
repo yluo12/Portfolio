@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik:wght@400;500;700&display=swap');
 
-// variables
+/*- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+// variables -- FONT
 $font-homePage: 'Pacifico', cursive;
 $font-body: 'Rubik', sans-serif;
 
-$color-background: #ebe5d9; // #f5f1e3
-$color-green: #c2eaba;
+// variables -- COLORS
+$color-background:#f8f5ef; //  #ebe5d9
+$color-green: #D7F5D1;
 $color-pink: #FFD8E1;
 $color-yellow: #F5E2A4;
-$color-blue: #A8C5EC;
-$color-purple: #B5B2E1;
+$color-blue: #BCD8FC;
+$color-purple: #c2c0ec;
+$color-peach: #f7d5bf;
+$color-font-body: #07515F;
+$color-font-heading: #3c8e9d;
+$color-font-hover: #6daab6;
 
 // Mixins
 @mixin flex-center {
@@ -18,25 +27,45 @@ $color-purple: #B5B2E1;
   align-items: center;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
   font-family: $font-body;
+  background-color: $color-background;
+  color: $color-font-body;
+
+  position: relative;
 }
 
 h1 {
   font-family: $font-homePage;
 }
 
+// HERO
 .hero {
-  background: linear-gradient(45deg, $color-green, $color-yellow, $color-pink, $color-blue, $color-purple);
-  background-size: 400%;
   height: 100vh;
+  box-shadow: 0px 50px 50px $color-background;
+  margin-bottom: 5rem;
+
   @include flex-center;
-  animation: bgAnimation 15s linear infinite;
+  background: linear-gradient(45deg, $color-green, $color-yellow, $color-peach, $color-pink, $color-blue, $color-purple);
+  background-size: 400%;
+  animation: bgAnimation 20s linear infinite;
 }
 
+// hero section background animation
 @keyframes bgAnimation {
   0%{
     background-position: 0% 50%;
@@ -46,5 +75,39 @@ h1 {
   }
   100%{
     background-position: 0% 50%;
+  }
+}
+
+// NAVIGATION
+.navigation {
+  width: 100vw;
+  position: absolute;
+  top: 3.6rem;
+  @include flex-center;
+
+  ul {
+    width: 50vw;
+    @include flex-center;
+    justify-content: space-around;
+    list-style-type: none;
+
+    li {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-font-heading;
+    padding: 0.5rem 1rem;
+
+    &:hover, &:active {
+      color: $color-font-hover;
+      background-color: $color-background;
+
+      border-radius: 2rem;
+      box-shadow: 0px 0px 20px $color-background;
+    }
   }
 }
