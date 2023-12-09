@@ -52,7 +52,7 @@ body {
   position: relative;
 }
 
-h1 {
+h1, h3 {
   font-family: $font-homePage;
 }
 
@@ -88,7 +88,7 @@ h1 {
 
   p {
     color: $color-font-heading;
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-align: center;
     margin-top: 8rem;
   }
@@ -145,9 +145,10 @@ h1 {
 .container-bubble {
   width: 8rem;
   height: 8rem;
-  position: absolute;
+  // position: absolute;
   top: 7.5rem;
   left: 65rem;
+  // left: 0;
   animation: bubble 8s ease-in-out infinite;
 }
 
