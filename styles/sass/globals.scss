@@ -56,6 +56,13 @@ h1, h3 {
   font-family: $font-homePage;
 }
 
+.container-page {
+  // @include flex-center;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
 // ************** HERO *****************
 .hero {
   // max-width: 120rem;
@@ -173,4 +180,28 @@ h1, h3 {
   50% {
     transform: scale(1);
   }
+}
+
+// ************** PROJECTS *****************
+.section-projects {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.container-card {
+  @include flex-center;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.project-card {
+  @include flex-center;
+  box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.1);
+
+  .img-project {
+    width: 60rem;
+    height: 40rem;
+    object-fit: contain;
+  }
+
 }

@@ -21,11 +21,13 @@ const Projects = () => {
   }];
 
   return (
-    <section>
+    <section className="section-projects">
       <h2>PROJECTS</h2>
-      {projectData.map((project) => {
-        return <ProjectCard project={project} key={project.project} />
-      })}
+      <div className="container-card">
+        {projectData.map((project) => {
+          return <ProjectCard project={project} key=  {project.project} />
+        })}
+      </div>
     </section>
   )
 };

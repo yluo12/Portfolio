@@ -14,9 +14,9 @@ const ProjectCard = ({project}) => {
     img = mvpImg;
   }
   return (
-    <div>
+    <div className="project-card">
       <div>
-        <Image src={img} alt={project.project + " screenshot"} />
+        <Image src={img} alt={project.project + " screenshot"} className="img-project" />
       </div>
       <div>
         <span>{project.project}</span>

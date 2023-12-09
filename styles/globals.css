@@ -29,6 +29,12 @@ h1, h3 {
   font-family: "Pacifico", cursive;
 }
 
+.container-page {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
 .hero {
   height: 100vh;
   box-shadow: 0px 50px 50px #f8f5ef;
@@ -126,6 +132,30 @@ h1, h3 {
   50% {
     transform: scale(1);
   }
+}
+.section-projects {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.project-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.1);
+}
+.project-card .img-project {
+  width: 60rem;
+  height: 40rem;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=globals.css.map */
