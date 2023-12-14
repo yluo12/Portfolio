@@ -52,12 +52,12 @@ body {
   background-color: $color-background;
   color: $color-font-heading;
 
-  position: relative;
+  // position: relative;
 
   // height: 100vh;
   // box-shadow: 0px 50px 50px $color-background;
 
-  @include flex-center;
+  // @include flex-center;
   background: linear-gradient(45deg, $color-green, $color-yellow, $color-peach, $color-pink, $color-blue, $color-purple);
   background-size: 400%;
   animation: bgAnimation 20s linear infinite;
@@ -78,7 +78,7 @@ body {
 
 section {
   min-width: 100rem;
-  margin: 4.8rem auto 0;
+  margin: 2.4rem auto 2.4rem;
 }
 
 h1, h3 {
@@ -134,7 +134,8 @@ h1, h3 {
 // ***************** NAVIGATION *****************
 .navigation {
   width: 100vw;
-  position: absolute;
+  position: sticky;
+  // position: fixed;
   top: 3.6rem;
   @include flex-center;
 
@@ -158,6 +159,7 @@ h1, h3 {
     &:hover, &:active {
       color: $color-font-hover;
       background-color: $color-background;
+      // border-bottom: 2px solid $color-font-hover;
 
       border-radius: 2rem;
       box-shadow: 0px 0px 20px $color-background;
@@ -264,7 +266,7 @@ ul.tab-nav {
 // ************** PROJECTS *****************
 #projects {
   max-width: 100rem;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   h2 {
     letter-spacing: 0.75px;

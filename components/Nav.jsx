@@ -6,11 +6,11 @@ const Nav = () => {
   return (
     <nav className="navigation">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link href="#home">Home</Link></li>
+        <li><Link href="#skills">Skills</Link></li>
+        <li><Link href="#projects">Projects</Link></li>
+        <li><Link href="#games">Games</Link></li>
+        <li><Link href="#contact">Contact</Link></li>
       </ul>
     </nav>
   )
