@@ -78,7 +78,7 @@ body {
 
 section {
   min-width: 100rem;
-  margin: 0 auto 4.8rem;
+  margin: 4.8rem auto 0;
 }
 
 h1, h3 {
@@ -100,7 +100,7 @@ h1, h3 {
 }
 
 // ************** HERO *****************
-.hero {
+#home {
   height: 100vh;
   margin-bottom: 0;
   @include flex-center;
@@ -200,7 +200,7 @@ h1, h3 {
 }
 
 // ************** SKILLS *******************
-.skills {
+#skills {
   min-width: 100rem;
   margin: 0 auto 4.8rem;
 }
@@ -262,7 +262,7 @@ ul.tab-nav {
 }
 
 // ************** PROJECTS *****************
-.section-projects {
+#projects {
   max-width: 100rem;
   margin: 0 auto;
 

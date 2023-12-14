@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section>
+    <section id="contact">
       <h2 className="subheading">CONTACT ME</h2>
     </section>
   )

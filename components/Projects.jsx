@@ -21,7 +21,7 @@ const Projects = () => {
   }];
 
   return (
-    <section className="section-projects">
+    <section id="projects">
       <h2 className="subheading">PROJECTS</h2>
       <div className="container-card">
         {projectData.map((project) => {

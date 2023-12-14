@@ -3,7 +3,7 @@ import Bubble from '@components/Bubble';
 const Hero = () => {
 
   return (
-    <section className="hero">
+    <section id="home">
       <div>
       <Bubble />
         <h3>Hi, I'm</h3>
