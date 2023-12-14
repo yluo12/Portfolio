@@ -23,6 +23,7 @@ $color-peach: #f7d5bf;
 $color-font-heading: #07515F;
 $color-font-body: #0b7285;
 $color-font-hover: #6daab6;
+$color-skills-active: #b2dde5;
 
 // Mixins
 @mixin flex-center {
@@ -47,6 +48,7 @@ html {
 
 body {
   font-family: $font-body;
+  font-size: 1.8rem;
   background-color: $color-background;
   color: $color-font-heading;
 
@@ -74,6 +76,11 @@ body {
   }
 }
 
+section {
+  min-width: 100rem;
+  margin: 0 auto 4.8rem;
+}
+
 h1, h3 {
   font-family: $font-homePage;
 }
@@ -89,11 +96,13 @@ h1, h3 {
   letter-spacing: 0.75px;
   font-weight: 500;
   font-size: 1.8rem;
+  color: $color-font-body;
 }
 
 // ************** HERO *****************
 .hero {
   height: 100vh;
+  margin-bottom: 0;
   @include flex-center;
 
   div {
@@ -191,36 +200,66 @@ h1, h3 {
 }
 
 // ************** SKILLS *******************
-.tab-nav {
+.skills {
+  min-width: 100rem;
+  margin: 0 auto 4.8rem;
+}
+
+.subheading {
+  margin-bottom: 2.5rem;
+}
+
+.tabs {
+  margin: 0 auto;
+  border: 1px solid #cccbc6;
+  box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.076);
+  border-radius: 1rem;
+}
+
+ul.tab-nav {
+  margin: 1.6rem 0 3.6rem 2.4rem;
+  font-weight: 500;
   @include flex-center;
-  justify-content: flex-start;
-  gap: 5rem;
+  justify-content: space-around;
 
   li {
+    padding: 0.8rem 1.8rem;
     list-style: none;
+    font-size: 2rem;
     text-align: center;
     cursor: pointer;
     transition: all 0.7s;
-    border-bottom-left-radius: 2rem;
-    border-top-left-radius: 2rem;
+    border-radius: 0;
 
-    &:nth-child(2) {
-      border-radius: 0;
+    &:first-child {
+      border-bottom-left-radius: 2rem;
+      border-top-left-radius: 2rem;
+    }
+
+    &:last-child {
       border-bottom-right-radius: 2rem;
       border-top-right-radius: 2rem;
     }
 
     &:hover, &:active {
-      background: $color-background-hover;
+      background: $color-skills-active;
+
     }
   }
 }
 
 .active {
-  background: $color-background-hover;
+  background: $color-skills-active;
 }
 
-
+.tabContent {
+  margin: 0 4.8rem 4.8rem;
+  color: $color-font-body;
+  list-style: none;
+  @include flex-center;
+  justify-content: space-around;
+  gap: 1.8rem;
+}
 
 // ************** PROJECTS *****************
 .section-projects {
