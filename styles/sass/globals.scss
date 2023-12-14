@@ -86,7 +86,6 @@ h1, h3 {
 }
 
 .container-page {
-  // @include flex-center;
   display: flex;
   flex-direction: column;
   gap: 4.8rem;
@@ -97,13 +96,16 @@ h1, h3 {
   font-weight: 500;
   font-size: 1.8rem;
   color: $color-font-body;
+  margin-bottom: 3.2rem;
 }
 
 // ************** HERO *****************
 #home {
   height: 100vh;
   margin-bottom: 0;
+  margin-top: 4.8rem;
   @include flex-center;
+  align-items: flex-start;
 
   div {
     max-width: 80rem;
@@ -126,7 +128,7 @@ h1, h3 {
     color: $color-font-body;
     font-size: 2rem;
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 6.4rem;
   }
 }
 
@@ -135,7 +137,6 @@ h1, h3 {
 .navigation {
   width: 100vw;
   position: sticky;
-  // position: fixed;
   top: 3.6rem;
   @include flex-center;
 
@@ -144,6 +145,12 @@ h1, h3 {
     @include flex-center;
     justify-content: space-around;
     list-style-type: none;
+
+    background-color:rgba(248, 245, 239, 0.746) ;
+    padding: 1.2rem 1.8rem;
+    border-radius: 3rem;
+    box-shadow: 0px 0px 20px $color-background;
+    z-index: 2000;
 
     li {
       font-size: 1.8rem;
@@ -154,15 +161,10 @@ h1, h3 {
   a {
     text-decoration: none;
     color: $color-font-heading;
-    padding: 0.5rem 1rem;
 
     &:hover, &:active {
       color: $color-font-hover;
-      background-color: $color-background;
-      // border-bottom: 2px solid $color-font-hover;
-
-      border-radius: 2rem;
-      box-shadow: 0px 0px 20px $color-background;
+      border-bottom: 2px solid $color-font-hover;
     }
   }
 }
@@ -207,9 +209,9 @@ h1, h3 {
   margin: 0 auto 4.8rem;
 }
 
-.subheading {
-  margin-bottom: 2.5rem;
-}
+// .subheading {
+//   margin-bottom: 2.5rem;
+// }
 
 .tabs {
   margin: 0 auto;
@@ -234,13 +236,13 @@ ul.tab-nav {
     border-radius: 0;
 
     &:first-child {
-      border-bottom-left-radius: 2rem;
-      border-top-left-radius: 2rem;
+      border-bottom-left-radius: 1rem;
+      border-top-left-radius: 1rem;
     }
 
     &:last-child {
-      border-bottom-right-radius: 2rem;
-      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 1rem;
+      border-top-right-radius: 1rem;
     }
 
     &:hover, &:active {

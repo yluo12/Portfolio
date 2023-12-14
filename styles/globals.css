@@ -59,14 +59,17 @@ h1, h3 {
   font-weight: 500;
   font-size: 1.8rem;
   color: #0b7285;
+  margin-bottom: 3.2rem;
 }
 
 #home {
   height: 100vh;
   margin-bottom: 0;
+  margin-top: 4.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  align-items: flex-start;
 }
 #home div {
   max-width: 80rem;
@@ -86,7 +89,7 @@ h1, h3 {
   color: #0b7285;
   font-size: 2rem;
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 6.4rem;
 }
 
 .navigation {
@@ -104,6 +107,11 @@ h1, h3 {
   align-items: center;
   justify-content: space-around;
   list-style-type: none;
+  background-color: rgba(248, 245, 239, 0.746);
+  padding: 1.2rem 1.8rem;
+  border-radius: 3rem;
+  box-shadow: 0px 0px 20px #f8f5ef;
+  z-index: 2000;
 }
 .navigation ul li {
   font-size: 1.8rem;
@@ -112,13 +120,10 @@ h1, h3 {
 .navigation a {
   text-decoration: none;
   color: #07515F;
-  padding: 0.5rem 1rem;
 }
 .navigation a:hover, .navigation a:active {
   color: #6daab6;
-  background-color: #f8f5ef;
-  border-radius: 2rem;
-  box-shadow: 0px 0px 20px #f8f5ef;
+  border-bottom: 2px solid #6daab6;
 }
 
 .container-bubble {
@@ -150,10 +155,6 @@ h1, h3 {
   margin: 0 auto 4.8rem;
 }
 
-.subheading {
-  margin-bottom: 2.5rem;
-}
-
 .tabs {
   margin: 0 auto;
   border: 1px solid #cccbc6;
@@ -179,12 +180,12 @@ ul.tab-nav li {
   border-radius: 0;
 }
 ul.tab-nav li:first-child {
-  border-bottom-left-radius: 2rem;
-  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
 ul.tab-nav li:last-child {
-  border-bottom-right-radius: 2rem;
-  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 ul.tab-nav li:hover, ul.tab-nav li:active {
   background: #b2dde5;
