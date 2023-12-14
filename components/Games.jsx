@@ -1,7 +1,7 @@
 const Games = () => {
   return (
     <section>
-      <h2>NOSTALGIC GAMES</h2>
+      <h2 className="subheading">NOSTALGIC GAMES</h2>
       <p>Coming soon!</p>
     </section>
   )

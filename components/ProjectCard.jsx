@@ -6,7 +6,7 @@ import mvpImg from '/public/images/img-mvp.png';
 
 const ProjectCard = ({project}) => {
   let img;
-  if (project.project === 'An E-commerce Webpage and API services') {
+  if (project.project === 'An E-commerce Webpage') {
     img = fecImg;
   } else if (project.project === 'School MarketPlace') {
     img = mvpImg;
@@ -16,16 +16,17 @@ const ProjectCard = ({project}) => {
   return (
     <div className="project-card">
       <div>
-        <Image src={img} alt={project.project + " screenshot"} className="img-project" />
+        <Image src={img} alt={project.project + " screenshot"} className="project-img" />
       </div>
       <div>
-        <span>{project.project}</span>
-        <ul>
+        <span className="project-name">{project.project}</span>
+        <ul className="project-tech">
+          <li>Tech:</li>
           {project.tech.map((t) => {
             return <li key={t}>{t}</li>
           })}
         </ul>
-        <p>{project.description}</p>
+        <p className="project-description">{project.description}</p>
       </div>
     </div>
   )

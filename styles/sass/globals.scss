@@ -13,14 +13,15 @@ $font-body: 'Rubik', sans-serif;
 
 // variables -- COLORS
 $color-background:#f8f5ef; //  #ebe5d9
+$color-background-hover: #dfddd7;
 $color-green: #D7F5D1;
 $color-pink: #FFD8E1;
 $color-yellow: #F5E2A4;
 $color-blue: #BCD8FC;
 $color-purple: #c2c0ec;
 $color-peach: #f7d5bf;
-$color-font-body: #07515F;
-$color-font-heading: #0b7285;
+$color-font-heading: #07515F;
+$color-font-body: #0b7285;
 $color-font-hover: #6daab6;
 
 // Mixins
@@ -47,9 +48,30 @@ html {
 body {
   font-family: $font-body;
   background-color: $color-background;
-  color: $color-font-body;
+  color: $color-font-heading;
 
   position: relative;
+
+  // height: 100vh;
+  // box-shadow: 0px 50px 50px $color-background;
+
+  @include flex-center;
+  background: linear-gradient(45deg, $color-green, $color-yellow, $color-peach, $color-pink, $color-blue, $color-purple);
+  background-size: 400%;
+  animation: bgAnimation 20s linear infinite;
+}
+
+// background animation
+@keyframes bgAnimation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
 }
 
 h1, h3 {
@@ -63,18 +85,16 @@ h1, h3 {
   gap: 4.8rem;
 }
 
+.subheading {
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
 // ************** HERO *****************
 .hero {
-  // max-width: 120rem;
   height: 100vh;
-  box-shadow: 0px 50px 50px $color-background;
-  // margin: 0 auto;
-
   @include flex-center;
-  background: linear-gradient(45deg, $color-green, $color-yellow, $color-peach, $color-pink, $color-blue, $color-purple);
-  background-size: 400%;
-  animation: bgAnimation 20s linear infinite;
-  // position: relative;
 
   div {
     max-width: 80rem;
@@ -82,7 +102,7 @@ h1, h3 {
   }
 
   h3 {
-    color: $color-font-heading;
+    color: $color-font-body;
     font-size: 2.4rem;
     font-weight: 400;
     text-align: center;
@@ -94,25 +114,13 @@ h1, h3 {
   }
 
   p {
-    color: $color-font-heading;
+    color: $color-font-body;
     font-size: 2rem;
     text-align: center;
     margin-top: 8rem;
   }
 }
 
-// hero section background animation
-@keyframes bgAnimation {
-  0%{
-    background-position: 0% 50%;
-  }
-  50%{
-    background-position: 100% 50%;
-  }
-  100%{
-    background-position: 0% 50%;
-  }
-}
 
 // ***************** NAVIGATION *****************
 .navigation {
@@ -182,26 +190,81 @@ h1, h3 {
   }
 }
 
+// ************** SKILLS *******************
+.tab-nav {
+  @include flex-center;
+  justify-content: flex-start;
+  gap: 5rem;
+
+  li {
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+
+    &:nth-child(2) {
+      border-radius: 0;
+      border-bottom-right-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+
+    &:hover, &:active {
+      background: $color-background-hover;
+    }
+  }
+}
+
+.active {
+  background: $color-background-hover;
+}
+
+
+
 // ************** PROJECTS *****************
 .section-projects {
   max-width: 100rem;
   margin: 0 auto;
+
+  h2 {
+    letter-spacing: 0.75px;
+    font-weight: 500;
+  }
 }
 
 .container-card {
   @include flex-center;
   flex-direction: column;
   gap: 4.8rem;
+  margin-top: 2.4rem;
 }
 
 .project-card {
+  color: $color-font-heading;
+  font-size: 2rem;
   @include flex-center;
   box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.1);
 
-  .img-project {
+  .project-img {
     width: 60rem;
     height: 40rem;
     object-fit: contain;
   }
+  .project-name {
+    font-size: 3.6rem;
+    font-weight: 500;
+  }
 
+  .project-tech {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.8rem;
+    list-style-type: none;
+  }
+
+  .project-description {
+    color: $color-font-body;
+    margin-top: 1.6rem;
+  }
 }

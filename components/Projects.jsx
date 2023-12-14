@@ -2,9 +2,9 @@ import ProjectCard from '@components/ProjectCard';
 
 const Projects = () => {
   const projectData = [{
-    project: 'An E-commerce Webpage and API services',
+    project: 'An E-commerce Webpage',
     url: '/public/images/img-fec.png',
-    tech: ['React', 'Express', 'Postgresql', 'Jest', 'AWS EC2', 'Nginx'],
+    tech: ['React', 'Express', 'Postgresql', 'Jest', 'AWS', 'Nginx'],
     description: 'This is an E-commerce webpage I created with 3 other teammates. I created reusable frontend components without the utilization of external libraries, and also built out a new restful API with backend system to replace the existing API for the website.'
   },
   {
@@ -16,13 +16,13 @@ const Projects = () => {
   {
     project: 'NativEats',
     url: '/public/images/img-mvp.png',
-    tech: ['React Native', 'Express', 'Postgresql', 'Yelp Fusion API'],
+    tech: ['React Native', 'Express', 'Postgresql'],
     description: "I built this social media mobile application in a team of 7 engineers. I was responsible of home page and restaurant detail page. I resolved group conflicts on architecture discussion and pull request reviews."
   }];
 
   return (
     <section className="section-projects">
-      <h2>PROJECTS</h2>
+      <h2 className="subheading">PROJECTS</h2>
       <div className="container-card">
         {projectData.map((project) => {
           return <ProjectCard project={project} key=  {project.project} />
