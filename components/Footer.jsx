@@ -12,8 +12,12 @@ const Footer = () => {
         <div><span className="material-symbols-outlined">location_on</span>San Francisco Bay Area</div>
       </div>
       <div>
-        <a href="https://www.linkedin.com/in/yantingluo/"><Image src={linkedinImg} alt="Linkedin logo image"/></a>
-        <a href="https://github.com/yluo12"><Image src={githubImg} alt="Github logo image"/></a>
+        <a href="https://www.linkedin.com/in/yantingluo/">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" />
+          </a>
+        <a href="https://github.com/yluo12">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+          </a>
       </div>
     </section>
   )

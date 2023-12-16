@@ -78,7 +78,7 @@ body {
 
 section {
   min-width: 100rem;
-  margin: 2.4rem auto 2.4rem;
+  margin: 3.6rem auto 4.8rem;
 }
 
 h1, h3 {
@@ -88,7 +88,6 @@ h1, h3 {
 .container-page {
   display: flex;
   flex-direction: column;
-  gap: 4.8rem;
 }
 
 .subheading {
@@ -101,11 +100,13 @@ h1, h3 {
 
 // ************** HERO *****************
 #home {
-  height: 100vh;
+  height: 85vh;
   margin-bottom: 0;
   margin-top: 4.8rem;
   @include flex-center;
   align-items: flex-start;
+  // border-top: 1px solid #000;
+  // border-bottom: 1px solid #000;
 
   div {
     max-width: 80rem;
@@ -136,8 +137,9 @@ h1, h3 {
 // ***************** NAVIGATION *****************
 .navigation {
   width: 100vw;
+  height: 15vh;
   position: sticky;
-  top: 3.6rem;
+  // top: 3.6rem;
   @include flex-center;
 
   ul {
@@ -209,10 +211,6 @@ h1, h3 {
   margin: 0 auto 4.8rem;
 }
 
-// .subheading {
-//   margin-bottom: 2.5rem;
-// }
-
 .tabs {
   margin: 0 auto;
   border: 1px solid #cccbc6;
@@ -268,46 +266,61 @@ ul.tab-nav {
 // ************** PROJECTS *****************
 #projects {
   max-width: 100rem;
-  // margin: 0 auto;
-
-  h2 {
-    letter-spacing: 0.75px;
-    font-weight: 500;
-  }
 }
 
 .container-card {
   @include flex-center;
   flex-direction: column;
   gap: 4.8rem;
-  margin-top: 2.4rem;
 }
 
 .project-card {
+  max-width: 100rem;
   color: $color-font-heading;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  background: $color-background;
+  box-shadow: 4px 9px 35px -9px rgba(0,0,0,0.3);
+  // box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
   @include flex-center;
-  box-shadow: 0 3.2px 6.4px rgba(0, 0, 0, 0.1);
+  gap: 2.4rem;
 
-  .project-img {
+  .container-img {
     width: 60rem;
     height: 40rem;
-    object-fit: contain;
-  }
-  .project-name {
-    font-size: 3.6rem;
-    font-weight: 500;
+    text-align: left;
+
+    .project-img {
+      display: block;
+      width: 60rem;
+      height: 40rem;
+      object-fit: fill;
+    }
   }
 
-  .project-tech {
-    margin-top: 0.8rem;
-    display: flex;
-    gap: 0.8rem;
-    list-style-type: none;
-  }
+  .container-text {
+    margin-right: 2.4rem;
 
-  .project-description {
-    color: $color-font-body;
-    margin-top: 1.6rem;
+    .project-name {
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    .project-tech {
+      margin-top: 0.8rem;
+      display: flex;
+      gap: 0.6rem;
+      list-style-type: none;
+    }
+
+    .project-description {
+      color: $color-font-body;
+      margin-top: 1.6rem;
+    }
   }
 }
+
+// ************** GAMES *******************
+
+// ************** CONTACT *******************
